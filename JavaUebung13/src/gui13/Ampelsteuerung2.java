@@ -144,6 +144,7 @@ public class Ampelsteuerung2 extends JFrame {
 						chckbxAutomatik.repaint();
 						panelAmpel.setRot();
 						Thread.sleep(rotPhase);
+			//paintImmediately ist von der JComponent vererbt und zeichnet das Panel sofort neu
 						panelAmpel.paintImmediately(0, 0, panelAmpel.getWidth(), panelAmpel.getHeight());
 						panelAmpel.setRotgelb();
 						Thread.sleep(rotgelbPhase);
