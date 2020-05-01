@@ -23,11 +23,11 @@ import javax.swing.JTable;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class Stundenplan extends JFrame {
+public class Stundenplan3 extends JFrame {
 
 	private JPanel contentPane;
 	private JTable tableStundenplan;
-	private String dateiname = "." + File.separator + " stundenplan.dat";
+	private String dateiname = "." + File.separator + " stundenplanV2.dat";
 
 	/**
 	 * Launch the application.
@@ -50,7 +50,7 @@ public class Stundenplan extends JFrame {
 	 * @throws IOException 
 	 * @throws FileNotFoundException 
 	 */
-	public Stundenplan() throws FileNotFoundException, IOException {
+	public Stundenplan3() throws FileNotFoundException, IOException {
 	// Speichern der Tabelle beim Schließen des Programms
 		addWindowListener(new WindowAdapter() {
 			@Override
@@ -89,20 +89,8 @@ public class Stundenplan extends JFrame {
 	// In die JScrollpane eingefügte JTable
 		tableStundenplan = new JTable();
 		tableStundenplan.setModel(new DefaultTableModel(
-	// Unter den Properties der Tabelle > Models generierte Tabelle
-			new Object[][] {
-				{"1", null, null, null, null, null},
-				{"2", null, null, null, null, null},
-				{"3", null, null, null, null, null},
-				{"4", null, null, null, null, null},
-				{"5", null, null, null, null, null},
-				{"6", null, null, null, null, null},
-				{"7", null, null, null, null, null},
-				{"8", null, null, null, null, null},
-				{"9", null, null, null, null, null},
-				{"10", null, null, null, null, null},
-			},
-			new String[] { // Titel der einzelnen Spalten 
+			new String[][] { },
+			new String[] {
 				"Stunde", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"
 			}
 		));
